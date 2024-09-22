@@ -1,28 +1,29 @@
 ---
 import Card from '../Card.astro'
+import { Image } from 'astro:assets'
 import { LINKS } from '../../lib/constants'
+import mePetImage from '/public/me_pet.png'
 ---
-
 <Card
-  colSpan="md:col-span-1"
-  rowSpan="md:row-span-2"
-  title="Instagram"
-  href={LINKS.instagram}
+colSpan="md:col-span-1"
+rowSpan="md:row-span-2"
+title="Instagram"
+href={LINKS.instagram}
 >
-  <div class="flex h-full w-full flex-col">
-    <div>
-      <img
-        width="50"
-        height="50"
-        src="/me_pet.png"
-        class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
-        alt="memoji of Anubhav Gain with a pets on his arm"
-      />
-    </div>
-    <div>
-      <p class="mt-2 text-sm text-muted-foreground">
-        If you want to see my pets, you can follow me on Instagram.
-      </p>
-    </div>
-  </div>
+<div class="flex h-full w-full flex-col">
+<div>
+<Image
+src={mePetImage}
+width={250}
+height={250}
+class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
+alt="memoji of Anubhav Gain with a pets on his arm"
+/>
+</div>
+<div>
+<p class="mt-2 text-sm text-muted-foreground">
+ If you want to see my pets, you can follow me on Instagram.
+</p>
+</div>
+</div>
 </Card>
