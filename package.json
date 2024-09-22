@@ -22,7 +22,7 @@
     "astro": "^4.5.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "contentful": "^10.8.6",
+    "contentful": "^10.15.1",
     "lucide-react": "^0.363.0",
     "moment-timezone": "^0.5.45",
     "motion": "^10.17.0",
