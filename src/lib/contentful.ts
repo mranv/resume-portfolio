@@ -1,4 +1,5 @@
-import { createClient } from 'contentful'
+import pkg from 'contentful';
+const { createClient } = pkg;
 
 export const contentfulClient = createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
@@ -6,4 +7,4 @@ export const contentfulClient = createClient({
     ? import.meta.env.CONTENTFUL_PREVIEW_TOKEN
     : import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
   host: import.meta.env.DEV ? 'preview.contentful.com' : 'cdn.contentful.com',
-})
+});
