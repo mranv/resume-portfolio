@@ -1,7 +1,7 @@
 import type { Site, Page } from './types'
 
 export const loaderAnimation = {
-  duration: 0.5,
+  duration: 5,
   opacity: [0, 1],
   scale: [0.9, 1],
   easing: "ease-in-out",

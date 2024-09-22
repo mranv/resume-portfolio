@@ -40,10 +40,16 @@ import StudyCard from '../components/sections/StudyCard.astro'
   title="Anubhav Gain - DevSecOps Engineer & Cybersecurity Expert"
   description="Anubhav Gain is a skilled DevSecOps Engineer and Cybersecurity Expert specializing in automated security testing, threat monitoring, and vulnerability remediation. Explore his portfolio, projects, and expertise in cybersecurity and secure software development."
 >
-  <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-background text-3xl font-black uppercase text-foreground">
+<div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background">
+  <!-- <img
+    src="/shield_animation.gif" 
+    alt="Loading animation"
+    class="w-100 h-32 mb-4"
+  /> -->
+  <div class="text-3xl font-black uppercase text-foreground">
     Securing...
   </div>
-
+</div>
   <main
     class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-8 lg:gap-4"
   >
@@ -74,7 +80,7 @@ import StudyCard from '../components/sections/StudyCard.astro'
       colSpan="md:col-span-1"
       rowSpan="md:row-span-1"
       title="Blog & Insights"
-      href="/blog"
+      href="https://mranv.pages.dev"
     />
   </main>
 </BaseLayout>
