@@ -10,84 +10,145 @@ import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
 import TattooCard from '../components/sections/TattooCard.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
+import ProjectsCard from '../components/sections/ProjectsCard.astro'
+import MyStack from '../components/sections/MyStack.astro'
+import AchievementsCard from '../components/sections/AchievementsCard.astro'
+import CertificationsCard from '../components/sections/CertificationsCard.astro'
+import SkillsVisualization from '../components/sections/SkillsVisualization.astro'
+import StatsCard from '../components/sections/StatsCard.astro'
+import PhilosophyCard from '../components/sections/PhilosophyCard.astro'
 ---
 
 <script>
-  // Simple fade-in animation
+  // Enhanced staggered animations
   document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card-animate')
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add('fade-in')
-      }, index * 100)
-    })
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show')
+        }
+      })
+    }, { threshold: 0.1 })
+
+    const elements = document.querySelectorAll('[data-animate]')
+    elements.forEach((el) => observer.observe(el))
   })
 </script>
 
 <style>
-  .card-animate {
+  [data-animate] {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .card-animate.fade-in {
+  
+  [data-animate].show {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    [data-animate] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 </style>
 
 <BaseLayout
-  title="Anubhav Gain - DevSecOps Engineer & Cybersecurity Expert"
-  description="Anubhav Gain is a skilled DevSecOps Engineer and Cybersecurity Expert specializing in automated security testing, threat monitoring, and vulnerability remediation. Explore his portfolio, projects, and expertise in cybersecurity and secure software development."
+  title="Anubhav Gain - Cybersecurity Leader & Security Engineer"
+  description="Anubhav Gain is a Cybersecurity Leader, Security Engineer at Infopercept Consulting, and CEO at TechAnv Consulting. Specializing in XDR/OXDR platform development, Rust programming, DevSecOps, and cloud security solutions."
 >
-<div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background">
-  <!-- <img
-    src="/shield_animation.gif" 
-    alt="Loading animation"
-    class="w-100 h-32 mb-4"
-  /> -->
-  <div class="text-3xl font-black uppercase text-foreground">
-    Securing...
+<div id="loader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background transition-opacity duration-500">
+  <div class="relative">
+    <div class="w-20 h-20 border-4 border-primary/20 rounded-full animate-pulse"></div>
+    <div class="absolute top-0 left-0 w-20 h-20 border-4 border-t-primary border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"></div>
+  </div>
+  <div class="mt-6 text-lg font-medium text-muted-foreground animate-pulse">
+    Initializing Security Protocols...
   </div>
 </div>
   <main
-    class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-8 lg:gap-4"
+    class="relative m-auto grid w-full max-w-7xl gap-4 p-4 md:p-6 lg:p-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4"
   >
-    <IntroCard />
-    <AboutMe />
-    <CVCard />
-    <Now />
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-2"
-      title="Portfolio & Projects"
-      href="/portfolio"
-    />
-    <TimeZoneCard />
-    <ContactsCard />
-    <ExperienceCard />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <div class="flex h-full flex-col justify-between">
-        <blockquote class="mt-6 border-l-2 pl-6 italic">
-          "Security is always excessive until it's not enough."
-        </blockquote>
-        <p class="mt-2 text-xs">- Robbie Sinclair</p>
-      </div>
-    </Card>
-    <TattooCard />
-    <StudyCard />
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-1"
-      title="Blog & Insights"
-      href="https://mranv.pages.dev"
-    />
+    <!-- Hero Section - Full Width -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-4" data-animate>
+      <IntroCard />
+    </div>
+    
+    <!-- Stats Section - Full Width -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-4 animate-delay-100" data-animate>
+      <StatsCard />
+    </div>
+    
+    <!-- About & Experience Row -->
+    <div class="col-span-1 lg:col-span-2 animate-delay-200" data-animate>
+      <AboutMe />
+    </div>
+    <div class="col-span-1 animate-delay-300" data-animate>
+      <ExperienceCard />
+    </div>
+    <div class="col-span-1 animate-delay-400" data-animate>
+      <CVCard />
+    </div>
+    
+    <!-- Skills & Tech Stack Row -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-2 animate-delay-100" data-animate>
+      <MyStack />
+    </div>
+    <div class="col-span-1 md:col-span-2 lg:col-span-2 animate-delay-200" data-animate>
+      <SkillsVisualization />
+    </div>
+    
+    <!-- Projects Full Width -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-4 animate-delay-300" data-animate>
+      <ProjectsCard />
+    </div>
+    
+    <!-- Achievements & Certifications Row -->
+    <div class="col-span-1 animate-delay-100" data-animate>
+      <AchievementsCard />
+    </div>
+    <div class="col-span-1 animate-delay-200" data-animate>
+      <CertificationsCard />
+    </div>
+    <div class="col-span-1 animate-delay-300" data-animate>
+      <StudyCard />
+    </div>
+    <div class="col-span-1 animate-delay-400" data-animate>
+      <TimeZoneCard />
+    </div>
+    
+    <!-- Philosophy Section -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-4 animate-delay-100" data-animate>
+      <PhilosophyCard />
+    </div>
+    
+    <!-- Contact & Additional Info Row -->
+    <div class="col-span-1 animate-delay-200" data-animate>
+      <ContactsCard />
+    </div>
+    <div class="col-span-1 animate-delay-300" data-animate>
+      <Card
+        colSpan="col-span-1"
+        title="Blog & Insights"
+        href="https://mranv.pages.dev"
+      />
+    </div>
+    <div class="col-span-1 md:col-span-2 animate-delay-400" data-animate>
+      <Now />
+    </div>
   </main>
 </BaseLayout>
 
 <script>
-  // Hide loader after content is loaded
+  // Enhanced loader with smooth transition
   window.addEventListener('load', () => {
-    document.getElementById('loader').style.display = 'none'
+    const loader = document.getElementById('loader')
+    loader.style.opacity = '0'
+    setTimeout(() => {
+      loader.style.display = 'none'
+    }, 500)
   })
 </script>

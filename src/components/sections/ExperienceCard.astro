@@ -2,26 +2,41 @@
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { EXPERIENCE } from '../../lib/constants'
+import { SquareArrowOutUpRight } from 'lucide-react'
 ---
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Experience">
-  <div class="mt-2 space-y-4">
-    {EXPERIENCE.slice(0, 3).map((exp) => (
-      <div>
-        <h3 class="text-lg font-semibold">{exp.position}</h3>
-        {exp.link ? (
-          <a class="text-sm text-primary" href={exp.link}>
-            {exp.company}
-          </a>
-        ) : (
-          <span class="text-sm text-primary">{exp.company}</span>
-        )}
-        <p class="text-sm text-gray-600">
-          {exp.start} - {exp.end}
-        </p>
-      </div>
-    ))}
-    <a href="/work">
-      <Button variant="link" className="pl-0">View More</Button>
+<Card colSpan="col-span-1">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Experience</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+    </div>
+    <div class="space-y-4">
+      {EXPERIENCE.slice(0, 3).map((exp, index) => (
+        <div class="relative pl-6 pb-2 group">
+          <div class="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full group-hover:scale-125 transition-transform"></div>
+          {index !== 2 && <div class="absolute left-[3px] top-4 w-0.5 h-full bg-border"></div>}
+          <div>
+            <h4 class="text-base font-semibold text-foreground">{exp.position}</h4>
+            {exp.link ? (
+              <a class="text-sm text-primary hover:underline inline-flex items-center gap-1" href={exp.link} target="_blank">
+                {exp.company}
+                <SquareArrowOutUpRight className="h-3 w-3" />
+              </a>
+            ) : (
+              <span class="text-sm text-primary">{exp.company}</span>
+            )}
+            <p class="text-xs text-muted-foreground mt-1">
+              {exp.start} - {exp.end}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <a href="/work" class="inline-flex">
+      <Button variant="outline" size="sm" className="gap-2 hover:bg-primary hover:text-primary-foreground transition-all">
+        View All Experience
+        <SquareArrowOutUpRight className="h-4 w-4" />
+      </Button>
     </a>
   </div>
 </Card>

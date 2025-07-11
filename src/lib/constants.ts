@@ -13,11 +13,14 @@ export const LINKS = {
   instagram: 'https://www.instagram.com/anubhavgain',
   medium: 'https://mranv.medium.com/',
   discord: 'https://discordapp.com/users/163300027618295808',
+  portfolio: 'https://mranv.github.io',
+  twitter: 'https://twitter.com/AnubhavGain',
+  orcid: 'https://orcid.org/0009-0004-4131-5428',
 }
 
 export const SITE: Site = {
   TITLE: 'Anubhav Gain',
-  DESCRIPTION: 'DevSecOps Engineer and Cybersecurity Expert',
+  DESCRIPTION: 'Cybersecurity Leader, Security Engineer at Infopercept Consulting, CEO at TechAnv Consulting | XDR/OXDR Platform Development | Rust & DevSecOps Expert',
   AUTHOR: 'Anubhav Gain',
 }
 
@@ -59,12 +62,40 @@ export const STUDIES = [
 
 export const EXPERIENCE = [
   {
+    company: 'Infopercept Consulting',
+    location: 'Ahmedabad, Gujarat, India',
+    position: 'Security Engineer',
+    start: 'Apr 2024',
+    link: 'https://www.infopercept.com/',
+    end: 'Present',
+    tasks: [
+      'Leading XDR/OXDR platform development with focus on advanced threat detection and response capabilities',
+      'Developing security automation solutions using Rust for high-performance security tools and infrastructure',
+      'Implementing DevSecOps practices and security-as-code across CI/CD pipelines for enterprise clients',
+      'Building cloud security solutions and zero-trust architectures for scalable defense mechanisms'
+    ],
+  },
+  {
+    company: 'TechAnv Consulting',
+    location: 'Vadodara, Gujarat, India',
+    position: 'CEO & Founder',
+    start: 'Jan 2024',
+    link: 'https://techanvconsulting.com/',
+    end: 'Present',
+    tasks: [
+      'Pioneering cybersecurity research and innovative defense mechanism development',
+      'Leading open source security solutions development and community contributions',
+      'Providing strategic cybersecurity consulting for enterprise digital transformation',
+      'Driving innovation in security automation and threat intelligence platforms'
+    ],
+  },
+  {
     company: 'Atcults',
     location: 'Ahmedabad, Gujarat, India',
     position: 'DevSecOps Engineer',
     start: 'Nov 2023',
     link: 'https://www.atcults.com/',
-    end: 'Present',
+    end: 'Apr 2024',
     tasks: [
       'Architected and implemented automated security testing and threat monitoring systems within CI/CD pipelines, enhancing detection of vulnerabilities by 40%',
       'Spearheaded the adoption of security-as-code practices, resulting in a 30% reduction in security-related defects in application development',

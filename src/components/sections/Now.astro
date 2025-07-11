@@ -2,21 +2,45 @@
 import Card from '../Card.astro'
 import Pulse from '../Pulse.astro'
 ---
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
-  <div class="mb-2 flex w-full items-start justify-between">
-    <div class="flex flex-col">
-      <h2>Now</h2>
-      <a href="https://sive.rs/nowff" target="_blank">
-        <span class="cursor-pointer text-xs text-gray-500">what's that ?</span>
-      </a>
+<Card colSpan="col-span-1">
+  <div class="flex flex-col gap-4">
+    <div class="flex w-full items-start justify-between">
+      <div>
+        <h3 class="text-2xl font-bold mb-2">Now</h3>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-2"></div>
+        <a href="https://sive.rs/nowff" target="_blank">
+          <span class="cursor-pointer text-xs text-muted-foreground hover:text-primary transition-colors">what's a now page?</span>
+        </a>
+      </div>
+      <Pulse />
     </div>
-    <Pulse />
+    <div class="space-y-3">
+      <div>
+        <p class="text-sm font-semibold text-primary">Security Engineer @ Infopercept Consulting</p>
+        <p class="text-xs text-muted-foreground">Leading XDR/OXDR platform development</p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold text-primary">CEO & Founder @ TechAnv Consulting</p>
+        <p class="text-xs text-muted-foreground">Driving cybersecurity innovation and research</p>
+      </div>
+      <ul class="space-y-1 text-sm text-muted-foreground">
+        <li class="flex items-start gap-2">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
+          Building advanced threat detection systems with Rust
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
+          Developing security automation solutions for enterprise clients
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
+          Contributing to open-source security tools on GitHub
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
+          Writing technical articles on security best practices
+        </li>
+      </ul>
+    </div>
   </div>
-  <p class="text-xs">Currently working as a DevSecOps Engineer at Atcults Pvt. Ltd.</p>
-  <ul class="mt-2 list-disc text-xs">
-    <li>Integrating automated security testing in CI/CD pipelines</li>
-    <li>Developing open-source cybersecurity tools</li>
-    <li>Pursuing BTech in Cyber/Computer Forensics at Parul University</li>
-    <li>Writing articles on cybersecurity trends on Medium</li>
-  </ul>
 </Card>

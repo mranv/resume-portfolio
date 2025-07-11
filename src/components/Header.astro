@@ -18,23 +18,33 @@ import { ModeToggle } from '../components/ui/ThemeToggle'
 </script>
 
 <header
-  class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+  class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60"
 >
   <div
     class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
   >
     <div class="flex gap-6 md:gap-10">
-      <a href="/" class="flex items-center space-x-2">
-        <span class="inline-block font-bold">mranv</span>
+      <a href="/" class="flex items-center space-x-2 group">
+        <span class="inline-block text-xl font-bold gradient-text">AG</span>
+        <span class="inline-block font-medium text-muted-foreground group-hover:text-foreground transition-colors">Security Engineer</span>
       </a>
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
       <nav class="flex items-center space-x-1">
+        <a href="/" class={buttonVariants({ variant: 'ghost', size: 'sm' })}>
+          Home
+        </a>
+        <a href="/work" class={buttonVariants({ variant: 'ghost', size: 'sm' })}>
+          Experience
+        </a>
+        <a href="/portfolio" class={buttonVariants({ variant: 'ghost', size: 'sm' })}>
+          Projects
+        </a>
         <a
           href="https://github.com/mranv"
           target="_blank"
           rel="noreferrer"
-          class={buttonVariants({ variant: 'ghost' })}
+          class={buttonVariants({ variant: 'ghost', size: 'sm' })}
         >
           GitHub
         </a>

@@ -1,0 +1,51 @@
+---
+import Card from '../Card.astro'
+import { Shield, Lock, Server, Cloud } from 'lucide-react'
+---
+
+<Card colSpan="col-span-1 md:col-span-2 lg:col-span-4">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Featured Projects</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <a href="https://github.com/mranv/ebpf-file-monitor" target="_blank" class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all group cursor-pointer">
+        <div class="flex items-start gap-3">
+          <Shield className="h-5 w-5 text-primary mt-1 group-hover:scale-110 transition-transform" />
+          <div>
+            <h4 class="font-semibold text-sm">eBPF File Monitor</h4>
+            <p class="text-xs text-muted-foreground mt-1">Real-time file system monitoring using Rust & eBPF for security tracking</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://github.com/mranv/adPentest" target="_blank" class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all group cursor-pointer">
+        <div class="flex items-start gap-3">
+          <Lock className="h-5 w-5 text-primary mt-1 group-hover:scale-110 transition-transform" />
+          <div>
+            <h4 class="font-semibold text-sm">AD Pentest Suite</h4>
+            <p class="text-xs text-muted-foreground mt-1">Windows Active Directory pentesting documentation & tools</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://github.com/mranv/solitude" target="_blank" class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all group cursor-pointer">
+        <div class="flex items-start gap-3">
+          <Server className="h-5 w-5 text-primary mt-1 group-hover:scale-110 transition-transform" />
+          <div>
+            <h4 class="font-semibold text-sm">Solitude Security</h4>
+            <p class="text-xs text-muted-foreground mt-1">macOS & Linux isolation management for enhanced firewall control</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://github.com/mranv/tls.rs" target="_blank" class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all group cursor-pointer">
+        <div class="flex items-start gap-3">
+          <Cloud className="h-5 w-5 text-primary mt-1 group-hover:scale-110 transition-transform" />
+          <div>
+            <h4 class="font-semibold text-sm">TLS.rs</h4>
+            <p class="text-xs text-muted-foreground mt-1">Rust-based secure TCP client-server with SSL/TLS encryption</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</Card>

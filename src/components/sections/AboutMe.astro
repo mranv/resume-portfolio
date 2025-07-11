@@ -1,25 +1,56 @@
 ---
 import Card from '../Card.astro'
 ---
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
-  <div class="flex flex-col gap-2">
-    <p class="text-sm font-light">
-      Hi, I'm Anubhav, a DevSecOps Engineer and Cybersecurity Expert from India 🇮🇳.
-      <br />
-      <br />
-      My primary tools and areas of expertise include:
-      <ul class="list-inside list-disc">
-        <li>Rust</li>
-        <li>Python</li>
-        <li>SIEM</li>
-        <li>Bash Scripting</li>
-        <li>Threat Management</li>
-        <li>Cloud Security</li>
-        <li>Incident Response</li>
-        <li>Network Security</li>
-        <li>Vulnerability Managemnt</li>
-      </ul>
+<Card colSpan="col-span-1 lg:col-span-2">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">About Me</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-4"></div>
+    </div>
+    <p class="text-base text-muted-foreground leading-relaxed">
+      I'm a Cybersecurity Leader and Security Engineer from Vadodara, Gujarat, India 🇮🇳, 
+      passionate about building robust security solutions and advancing the field of cybersecurity.
     </p>
-
+    <div class="space-y-3">
+      <div class="p-3 rounded-lg bg-muted/50 border border-border/50">
+        <p class="text-sm font-semibold text-primary mb-1">Current Roles</p>
+        <p class="text-sm text-muted-foreground">
+          Security Engineer at <span class="font-medium text-foreground">Infopercept Consulting</span><br />
+          CEO & Founder at <span class="font-medium text-foreground">TechAnv Consulting</span>
+        </p>
+      </div>
+      <div class="p-3 rounded-lg bg-muted/50 border border-border/50">
+        <p class="text-sm font-semibold text-primary mb-1">Core Focus Areas</p>
+        <div class="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+          <div class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            XDR/OXDR Platforms
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            Rust Development
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            DevSecOps
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            Cloud Security
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            SIEM & YARA
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            Zero Trust
+          </div>
+        </div>
+      </div>
+    </div>
+    <blockquote class="border-l-2 border-primary pl-4 italic text-sm text-muted-foreground">
+      "Building secure systems that scale, one line of Rust at a time."
+    </blockquote>
   </div>
 </Card>

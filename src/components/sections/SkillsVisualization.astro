@@ -1,0 +1,59 @@
+---
+import Card from '../Card.astro'
+---
+
+<Card colSpan="col-span-1 md:col-span-2">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Expertise Level</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+    </div>
+    <div class="space-y-4">
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium">Python & Automation</span>
+          <span class="text-xs text-muted-foreground">85%</span>
+        </div>
+        <div class="w-full bg-muted rounded-full h-2">
+          <div class="bg-gradient-to-r from-cyber-blue to-cyber-purple h-2 rounded-full" style="width: 85%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium">DevSecOps & CI/CD</span>
+          <span class="text-xs text-muted-foreground">80%</span>
+        </div>
+        <div class="w-full bg-muted rounded-full h-2">
+          <div class="bg-gradient-to-r from-cyber-teal to-cyber-blue h-2 rounded-full" style="width: 80%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium">SIEM & Threat Detection</span>
+          <span class="text-xs text-muted-foreground">75%</span>
+        </div>
+        <div class="w-full bg-muted rounded-full h-2">
+          <div class="bg-gradient-to-r from-cyber-purple to-cyber-teal h-2 rounded-full" style="width: 75%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium">Rust Development</span>
+          <span class="text-xs text-muted-foreground">70%</span>
+        </div>
+        <div class="w-full bg-muted rounded-full h-2">
+          <div class="bg-gradient-to-r from-cyber-blue to-cyber-green h-2 rounded-full" style="width: 70%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium">Cloud Security (AWS/Azure)</span>
+          <span class="text-xs text-muted-foreground">70%</span>
+        </div>
+        <div class="w-full bg-muted rounded-full h-2">
+          <div class="bg-gradient-to-r from-cyber-green to-cyber-purple h-2 rounded-full" style="width: 70%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Card>

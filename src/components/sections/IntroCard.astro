@@ -2,39 +2,48 @@
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { LINKS } from '../../lib/constants'
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { Linkedin, Github, Mail, SquareArrowOutUpRight } from 'lucide-react'
 import { Image } from 'astro:assets'
 import profileImage from '/public/me.png'
 ---
-<Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
+<Card colSpan="col-span-1 md:col-span-2 lg:col-span-4">
 <div class="flex h-full w-full">
 <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
 <div class="flex h-full flex-col">
-<h6 class="m-0 text-sm font-light text-gray-500">welcome</h6>
-<p class="m-0 text-xl font-light">
- Hi, I'm <b class="font-bold">Anubhav Gain</b>, a cybersecurity expert,
- IT consultant, and CEO of TechAnv. With a strong focus on enhancing digital
- security and optimizing technology infrastructure, I'm passionate about
- creating safer and more efficient digital environments for businesses.
+<h6 class="m-0 text-sm font-medium uppercase tracking-wider text-primary/80">Security Professional</h6>
+<h1 class="mt-2 mb-4 text-4xl font-bold tracking-tight">
+ Hi, I'm <span class="gradient-text">Anubhav Gain</span>
+</h1>
+<p class="m-0 text-lg text-muted-foreground leading-relaxed">
+ Cybersecurity Leader, Security Engineer at <span class="font-medium text-foreground">Infopercept Consulting</span>, 
+ and CEO of <span class="font-medium text-foreground">TechAnv Consulting</span>. 
+ I specialize in XDR/OXDR platform development, DevSecOps, and building
+ robust security solutions with Rust and cloud technologies.
 </p>
 </div>
-<div class="flex gap-4">
+<div class="flex gap-3">
 <a href={LINKS.github} aria-label="github profile" target="_blank">
-<Button aria-label="github profile">
-<Github />
+<Button variant="outline" size="icon" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
+<Github className="h-5 w-5" />
 <span class="sr-only">GitHub Profile</span>
 </Button>
 </a>
 <a href={LINKS.linkedin} aria-label="linkedin profile" target="_blank">
-<Button aria-label="linkedin profile">
-<Linkedin />
+<Button variant="outline" size="icon" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
+<Linkedin className="h-5 w-5" />
 <span class="sr-only">Linkedin Profile</span>
 </Button>
 </a>
 <a href={LINKS.mail} aria-label="mail profile" target="_blank">
-<Button>
-<Mail />
+<Button variant="outline" size="icon" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
+<Mail className="h-5 w-5" />
 <span class="sr-only">Email contact</span>
+</Button>
+</a>
+<a href="/public/CV English.pdf" download aria-label="download resume">
+<Button className="gap-2">
+Download Resume
+<SquareArrowOutUpRight className="h-4 w-4" />
 </Button>
 </a>
 </div>

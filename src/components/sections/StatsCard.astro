@@ -1,0 +1,35 @@
+---
+import Card from '../Card.astro'
+import { Users, Shield, Code, Clock } from 'lucide-react'
+---
+
+<Card colSpan="col-span-1 md:col-span-2 lg:col-span-4">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Impact & Statistics</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="text-center p-4 rounded-lg bg-muted/30 border border-border/50">
+        <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
+        <div class="text-2xl font-bold gradient-text">3+</div>
+        <p class="text-sm text-muted-foreground">Years Experience</p>
+      </div>
+      <div class="text-center p-4 rounded-lg bg-muted/30 border border-border/50">
+        <Users className="h-8 w-8 text-primary mx-auto mb-2" />
+        <div class="text-2xl font-bold gradient-text">15+</div>
+        <p class="text-sm text-muted-foreground">Projects Delivered</p>
+      </div>
+      <div class="text-center p-4 rounded-lg bg-muted/30 border border-border/50">
+        <Code className="h-8 w-8 text-primary mx-auto mb-2" />
+        <div class="text-2xl font-bold gradient-text">40%</div>
+        <p class="text-sm text-muted-foreground">Threat Detection Improvement</p>
+      </div>
+      <div class="text-center p-4 rounded-lg bg-muted/30 border border-border/50">
+        <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
+        <div class="text-2xl font-bold gradient-text">99.9%</div>
+        <p class="text-sm text-muted-foreground">Security Uptime</p>
+      </div>
+    </div>
+  </div>
+</Card>

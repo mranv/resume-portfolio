@@ -1,0 +1,43 @@
+---
+import Card from '../Card.astro'
+import { Quote } from 'lucide-react'
+---
+
+<Card colSpan="col-span-1 md:col-span-2">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Security Philosophy</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="relative">
+        <Quote className="absolute top-0 left-0 h-4 w-4 text-primary/30" />
+        <blockquote class="pl-6 text-sm italic text-muted-foreground">
+          "There's no silver bullet solution with cybersecurity, a layered defense is the only viable defense."
+          <footer class="mt-2 text-xs font-medium text-foreground">— James Scott</footer>
+        </blockquote>
+      </div>
+      <div class="relative">
+        <Quote className="absolute top-0 left-0 h-4 w-4 text-primary/30" />
+        <blockquote class="pl-6 text-sm italic text-muted-foreground">
+          "Time is what determines security. With enough time, nothing is unhackable."
+          <footer class="mt-2 text-xs font-medium text-foreground">— Aniekee Ezekiel</footer>
+        </blockquote>
+      </div>
+      <div class="relative">
+        <Quote className="absolute top-0 left-0 h-4 w-4 text-primary/30" />
+        <blockquote class="pl-6 text-sm italic text-muted-foreground">
+          "It takes 20 years to build a reputation and a few minutes of cyber-incident to ruin it."
+          <footer class="mt-2 text-xs font-medium text-foreground">— Stephane Nappo</footer>
+        </blockquote>
+      </div>
+      <div class="relative">
+        <Quote className="absolute top-0 left-0 h-4 w-4 text-primary/30" />
+        <blockquote class="pl-6 text-sm italic text-muted-foreground">
+          "Amateurs hack systems. Professionals hack people."
+          <footer class="mt-2 text-xs font-medium text-foreground">— Bruce Schneier</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</Card>

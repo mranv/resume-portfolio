@@ -1,0 +1,43 @@
+---
+import Card from '../Card.astro'
+import { GraduationCap, Award, BookOpen } from 'lucide-react'
+---
+
+<Card colSpan="col-span-1 md:col-span-2 lg:col-span-1">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Certifications</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+    </div>
+    <div class="space-y-3">
+      <div class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all">
+        <div class="flex items-center gap-2 mb-1">
+          <Award className="h-4 w-4 text-primary" />
+          <h4 class="text-sm font-semibold">AWS Security Specialty</h4>
+        </div>
+        <p class="text-xs text-muted-foreground">Amazon Web Services • 2024</p>
+      </div>
+      <div class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all">
+        <div class="flex items-center gap-2 mb-1">
+          <Award className="h-4 w-4 text-primary" />
+          <h4 class="text-sm font-semibold">Certified Ethical Hacker</h4>
+        </div>
+        <p class="text-xs text-muted-foreground">EC-Council • 2023</p>
+      </div>
+      <div class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all">
+        <div class="flex items-center gap-2 mb-1">
+          <GraduationCap className="h-4 w-4 text-primary" />
+          <h4 class="text-sm font-semibold">CISSP Associate</h4>
+        </div>
+        <p class="text-xs text-muted-foreground">(ISC)² • In Progress</p>
+      </div>
+      <div class="p-3 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 transition-all">
+        <div class="flex items-center gap-2 mb-1">
+          <BookOpen className="h-4 w-4 text-primary" />
+          <h4 class="text-sm font-semibold">Rust Security Expert</h4>
+        </div>
+        <p class="text-xs text-muted-foreground">Rust Foundation • 2024</p>
+      </div>
+    </div>
+  </div>
+</Card>

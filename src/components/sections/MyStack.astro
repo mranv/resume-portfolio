@@ -1,18 +1,89 @@
 ---
 import Card from '../Card.astro'
 ---
-<Card colSpan="md:col-span-2" rowSpan="md:row-span-1" title="My Tech Stack">
-  <p class="text-sm font-light">
-    Here's a snapshot of the primary tools and technologies I work with in cybersecurity and DevSecOps:
-  </p>
-  <ul class="list-disc pl-5 text-sm font-light">
-    <li><strong>Python</strong> for automation and scripting</li>
-    <li><strong>Linux</strong> for system administration and security</li>
-    <li><strong>SIEM (Security Information and Event Management)</strong> tools</li>
-    <li><strong>CI/CD pipelines</strong> for secure software development</li>
-    <li><strong>Cloud security</strong> platforms (AWS, Azure)</li>
-    <li><strong>Rust</strong> for systems programming and security tools</li>
-    <li><strong>Docker</strong> for containerization and secure deployments</li>
-    <li><strong>Git</strong> for version control and collaborative development</li>
-  </ul>
+<Card colSpan="col-span-1 md:col-span-2 lg:col-span-2">
+  <div class="flex flex-col gap-4">
+    <div>
+      <h3 class="text-2xl font-bold mb-2">Tech Stack</h3>
+      <div class="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mb-4"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="group">
+        <div class="p-4 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 hover:bg-muted/50 transition-all">
+          <h4 class="font-semibold text-sm mb-3 text-primary">Languages</h4>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+              <span>Python</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-teal rounded-full"></span>
+              <span>Rust</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-purple rounded-full"></span>
+              <span>Bash/Shell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="p-4 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 hover:bg-muted/50 transition-all">
+          <h4 class="font-semibold text-sm mb-3 text-primary">Security</h4>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+              <span>SIEM/SOAR</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-teal rounded-full"></span>
+              <span>Wazuh/Splunk</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-purple rounded-full"></span>
+              <span>IDS/IPS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="p-4 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 hover:bg-muted/50 transition-all">
+          <h4 class="font-semibold text-sm mb-3 text-primary">DevSecOps</h4>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+              <span>Docker/K8s</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-teal rounded-full"></span>
+              <span>CI/CD</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-purple rounded-full"></span>
+              <span>GitLab/GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="p-4 rounded-lg bg-muted/30 border border-border/50 hover:border-primary/50 hover:bg-muted/50 transition-all">
+          <h4 class="font-semibold text-sm mb-3 text-primary">Platforms</h4>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-blue rounded-full"></span>
+              <span>AWS Security</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-teal rounded-full"></span>
+              <span>Linux</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-cyber-purple rounded-full"></span>
+              <span>OpenSearch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Card>
